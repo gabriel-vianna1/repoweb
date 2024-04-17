@@ -1,0 +1,25 @@
+main {
+    margin-top: 20px;
+}
+
+h4 {
+    font-size: 150%;
+}
+h4 a {
+    text-decoration: none;
+}
+
+main span {
+    border-radius: 8px;
+    background-color:#0059ff;
+    color: black;
+    margin: 6px;
+}
+
+@media all and (max-width: 758px) {
+    main span {
+        margin: 8px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

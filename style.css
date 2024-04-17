@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1em;
+}
+
+html, body {
+    height: 100%;
+}
+
+header { grid-area: header; }
+nav { grid-area: nav; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+
+.container-fluid {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid: "nav" auto 
+        "header" auto 
+        "main" 1fr 
+        "footer" auto / 1fr;
+}
+
+.container-fluid> * {
+    width: 100%;
+    padding: 10px;
+    background-color: #FFF;
+}
+
+.nav{
+    display: flex; 
+}
+
+nav,ul {
+    display:flex;
+    justify-content: space-between;
+}
+
+nav li {
+    list-style: none;
+    margin-left: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+nav a:hover {
+    background-color: purple;
+    border-radius: 5px;
+    padding:6px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+span {
+    background-color: silver;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.imagem h3 {
+    color:purple;
+}
+.imagem {
+    display: flex;
+}
+
+.texto {
+    margin-left: 10px;
+}
+.twiter {
+    margin-left: 10px;
+}
+.icone {
+    margin-left: 10px;
+}
+.user {
+    margin-left: 90px;
+}
+
+.card {
+    margin-top: 15px;
+}
+.Colegas {
+    margin-top: 40px;
+}
+.Colegas .card {
+    margin-top: 15px;
+} 
+
+.Carrosel {
+    margin-top: 20px;   
+}
+
+@media all and (min-width: 758px) {
+
+    .container-fluid{
+
+        grid: "nav nav" auto
+              "header header" auto
+              "main main" 1fr
+              "footer footer" auto / 2fr 10fr;
+
+    }
+    span a {
+        font-size: 250%;
+    }
+    span {
+        background-color: silver;
+        padding: 8px;
+        border-radius: 6px;
+    }
+    nav li {
+        font-size: 200%;
+        margin-left:10px ;
+    }
+    nav ul li a:hover {
+        background-color: purple;
+        border-radius: 6px;
+        padding:8px;
+    }
+    .imagem p {
+        font-size: 120%;
+    }
+    .repositorio {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(min(10rem, 100%), 1fr));
+        gap: 10px;
+    }
+    .Carrosel {
+        margin-top: 20px;   
+    }
+    .Carrosel img {
+       height: 600px;
+    }
+
+    .posicao {
+        display: flex;
+        justify-content:space-around;
+    }
+    .posicao img {
+        width: 200px;
+    }
+
+    .posicao .card {
+        margin: 10px;
+    }
+    footer {
+        text-align: center;
+    }
+    header img {
+        width: 220px;
+        height: 100%;
+    }
+}   
+
